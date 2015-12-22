@@ -16,7 +16,7 @@ Rails.application.routes.draw do
    root 'home#index'
 
   # Example of regular route:
-    get 'koszyk' => 'shoppingcart#index'
+    get 'koszyk' => 'shopping_cart#index'
     get 'zamow' => 'order#new'
     get 'dostawa' => 'order#delivery'
     get 'potwierdzenie' => 'order#confirm'
