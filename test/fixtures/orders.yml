@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2016-01-05 14:06:24
+  total_cost: 
+  total_cost: 
+  status: 1
+  client_id: 
+
+two:
+  data: 2016-01-05 14:06:24
+  total_cost: 
+  total_cost: 
+  status: 1
+  client_id: 

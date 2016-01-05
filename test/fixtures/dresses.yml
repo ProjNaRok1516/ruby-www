@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cost: 
+  cost: 
+  style_id: 
+  material_id: 
+  order_id: 
+
+two:
+  name: MyString
+  cost: 
+  cost: 
+  style_id: 
+  material_id: 
+  order_id: 
