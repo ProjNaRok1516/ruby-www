@@ -6,9 +6,9 @@ class AddressTest < ActiveSupport::TestCase
     assert adres.save, "correct address not saved"
   end
 
-  test "should save correct address" do
+  test "should save correct address without flat" do
     adres = addresses(:address_without_flat)
-    assert adres.save, "correct address not saved"
+    assert adres.save, "correct address without flat not saved"
   end
 
   test "should not save address without street" do
