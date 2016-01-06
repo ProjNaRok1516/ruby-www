@@ -1,11 +1,43 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  price_per_m2: 
-  price_per_m2: 
+  name: Jedwab
+  price_per_m2: 12
 
 two:
-  name: MyString
+  name: Jedwab
+  price_per_m2: 12.2
+
+material_without_name:
+  price_per_m2: 12.2
+
+material_without_price:
+  name: Jedwab
+
+material_with_empty_name:
+  name: 
+  price_per_m2: 12.2
+
+material_with_empty_price:
+  name: Jedwab
   price_per_m2: 
-  price_per_m2: 
+
+material_with_name_too_short:
+  name: J
+  price_per_m2: 12.2
+
+material_with_name_too_long:
+  name: Jjwhefhsadfhsadfhasdiufhasuifhasufha
+  price_per_m2: 12.2
+
+material_with_negative_price:
+  name: Jedwab
+  price_per_m2: -12.2
+
+material_with_no_cost:
+  name: Jedwab
+  price_per_m2: 0
+
+material_with_too_big_price:
+  name: Jedwab
+  price_per_m2: 12456789
