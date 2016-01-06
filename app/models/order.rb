@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
   belongs_to :client
-  validates :total_cost, numericality: true
+  validates :total_cost, numericality: { greater_than: 0 }
   validates_associated :client
 end
