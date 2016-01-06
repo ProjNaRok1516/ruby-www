@@ -1,15 +1,113 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  street: MyString
-  building: MyString
-  flat: MyString
-  city: MyString
-  postalcode: MyString
+  street: Grunwaldzka
+  building: 4
+  flat: 4
+  city: Sopot
+  postalcode: 23-546
 
-two:
-  street: MyString
-  building: MyString
-  flat: MyString
-  city: MyString
-  postalcode: MyString
+address_without_flat:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+  postalcode: 23-546
+
+address_without_street:
+  building: 4
+  city: Sopot
+  postalcode: 23-546
+
+address_without_building:
+  street: Grunwaldzka
+  city: Sopot
+  postalcode: 23-546
+
+address_without_city:
+  street: Grunwaldzka
+  building: 4
+  postalcode: 23-546
+
+address_without_postalcode:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+
+address_with_empty_street:
+  street: 
+  building: 4
+  city: Sopot
+  postalcode: 23-546
+
+address_street_too_short:
+  street: Gr
+  building: 4
+  city: Sopot
+  postalcode: 23-546
+
+address_street_too_long:
+  street: Grunwaldzkafghsdfuighasofuihguodsfhgojsdfhgokjsdnfpijghsdfjignsdkjfhgipufhgoiuadhfgisdfiuhsdifghnsdifuhgfdhgiusfdhgiu
+  building: 4
+  city: Sopot
+  postalcode: 23-546
+
+address_with_empty_building:
+  street: Grunwaldzka
+  building: 
+  city: Sopot
+  postalcode: 23-546
+
+address_building_too_long:
+  street: Grunwaldzka
+  building: zspdofgs9dfgoisdjfgvojsdfpogjdpoghjposhgoushgpiusdfpughsdufhgjipusdfhgpiuosdhgojsdhfuoghsduighsdpfiughsdjhgsdfh
+  city: Sopot
+  postalcode: 23-546
+
+address_flat_too_long:
+  street: Grunwaldzka
+  building: 4
+  flat: zspdofgs9dfgoisdjfgvojsdfpogjdpoghjposhgoushgpiusdfpughsdufhgjipusdfhgpiuosdhgojsdhfuoghsduighsdpfiughsdjhgsdfh
+  city: Sopot
+  postalcode: 23-546
+
+address_with_empty_city:
+  street: Grunwaldzka
+  building: 4
+  city: 
+  postalcode: 23-546
+
+address_city_too_short:
+  street: Grunwaldzka
+  building: 4
+  city: So
+  postalcode: 23-546
+
+address_city_too_long:
+  street: Grunwaldzka
+  building: 4
+  city: Sopothjfgpodsfhguisdfokshdpufhsdiufgyupdsyhgsdhgoisdhespfhgiusdhgfpuisdhiughsdfpigharpiughspidufghsdifgiusdhfgpiudshng
+  postalcode: 23-546
+
+address_postalcode_too_short:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+  postalcode: 23-54
+
+address_postalcode_too_long:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+  postalcode: 23-5423
+
+address_postalcode_without_dash:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+  postalcode: 230546
+
+address_postalcode_with_letter:
+  street: Grunwaldzka
+  building: 4
+  city: Sopot
+  postalcode: 23-5a6
