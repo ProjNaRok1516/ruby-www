@@ -7,5 +7,5 @@ class Address < ActiveRecord::Base
    validates :postalcode length: { minimum: 5 }    
    validates :postalcode length: { maximum: 5 }  
    validates :postalcode format: { with: /[0-9]{2}-[0-9]{3}/,
-    message: "only allows ints" }
+    message: "only supports xx-xxx" }
 end
