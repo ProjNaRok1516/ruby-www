@@ -52,6 +52,7 @@ class DressTest < ActiveSupport::TestCase
      assert_not Dress.create(style: nil).valid?
   end
    test "should save dress with style" do
+     bufiasta=Styl.new
      assert Dress.create(style: bufiasta).valid?
   end
   
@@ -60,6 +61,7 @@ class DressTest < ActiveSupport::TestCase
   end
   
    test "should save dress with material" do
+     jedwab=Material.new
      assert_not Dress.create(style: jedwab).valid?
   end
   
