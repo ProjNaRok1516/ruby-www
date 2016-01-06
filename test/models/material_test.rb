@@ -52,7 +52,7 @@ class MaterialTest < ActiveSupport::TestCase
   end 
 
    test "should not save material with too big price" do
-    material = materials(:material_with_big_price)
+    material = materials(:material_with_too_big_price)
     assert_not material.save, "material saved with too big price"
   end 
 end
