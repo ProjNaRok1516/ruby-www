@@ -40,7 +40,7 @@ address_with_empty_street:
   postalcode: 23-546
 
 address_street_too_short:
-  street: Gr
+  street: G
   building: 4
   city: Sopot
   postalcode: 23-546
@@ -79,7 +79,7 @@ address_with_empty_city:
 address_city_too_short:
   street: Grunwaldzka
   building: 4
-  city: So
+  city: S
   postalcode: 23-546
 
 address_city_too_long:
