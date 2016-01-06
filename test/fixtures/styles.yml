@@ -1,11 +1,78 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  image: MyString
-  material_amount: 1
+  name: Stylowa do kostek
+  image: stylowa34.png
+  material_amount: 3
 
 two:
-  name: MyString
-  image: MyString
-  material_amount: 1
+  name: Slubna stylowa co sie ciagnie
+  image: weddingstylowa.png
+  material_amount: 5
+
+style_with_empty_name: 
+  name: 
+  image: stylowa34.png
+  material_amount: 5 
+  
+style_with_empty_image: 
+  name: Stylowa do kostek
+  image:
+  material_amount: 5 
+  
+style_with_empty_material_amount: 
+  name:  Stylowa do kostek
+  image: stylowa34.png
+  material_amount: 
+  
+style_without_name: 
+  image: stylowa34.png
+  material_amount: 5 
+  
+style_without_image: 
+  name: Stylowa do kostek
+  material_amount: 5 
+  
+style_without_material_amount: 
+  name:  Stylowa do kostek
+  image: stylowa34.png
+
+style_with_too_long_name: 
+  name:  stylowa341234567890klkjhgfdsdfghjklkjhgfdsdrtyuijhgfdszxcvhjkjujyhgfdxcghjklkjytredfyuikjhgfdxcvhjklmmnbvcfgyuikjhgfdghjk
+  image: stylowa34.png
+  material_amount: 5
+
+style_with_too_big_material_amount: 
+  name:  Stylowa do kostek
+  image: stylowa34.png
+  material_amount: 6
+  
+style_with_too_big_image_name: 
+  name:  Stylowa do kostek
+  image: stylowa3tghjkfghjkytuiortyuiyrgfhghgfhgjklytughijoktfyguhijoastdfyugihijawygudjowdyguhlkwjafwgdvhbjkawdhjwdgvhbjakldgv4.png
+  material_amount: 5
+
+style_with_too_short_name: 
+  name:  s
+  image: stylowa34.png
+  material_amount: 5
+
+style_with_zero_material_amount: 
+  name:  Stylowa do kostek
+  image: stylowa34.png
+  material_amount: 0
+  
+style_with_too_small_image_name: 
+  name:  Stylowa do kostek
+  image: s.png
+  material_amount: 5
+  
+style_image_without_extension: 
+  name:  Stylowa do kostek
+  image: stylowa34
+  material_amount: 5
+
+style_image_without_dot_before_extension: 
+  name:  Stylowa do kostek
+  image: stylowa34png
+  material_amount: 5
