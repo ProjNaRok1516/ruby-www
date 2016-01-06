@@ -6,7 +6,7 @@ class AddressTest < ActiveSupport::TestCase
   end
   test "should not save wrong address" do
     adres = Address.new
-    assert_not adres.save
+    assert_not adres.save, "empty address saved"
   end
   test "should save correct address" do
     adres = Address.new
@@ -15,7 +15,7 @@ class AddressTest < ActiveSupport::TestCase
     adres.flat = "2"
     adres.city = "Gdansk"
     adres.postalcode = "80-180"
-    assert adres.save
+    assert adres.save, "full address not saved"
   end
   test "should save correct address without flat" do
     adres = Address.new
@@ -23,6 +23,6 @@ class AddressTest < ActiveSupport::TestCase
     adres.building = "2"
     adres.city = "Gdansk"
     adres.postalcode = "80-180"
-    assert adres.save
+    assert adres.save, "address without flat not saved"
   end
 end
