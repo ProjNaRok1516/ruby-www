@@ -8,5 +8,5 @@ class Dress < ActiveRecord::Base
   
    validates :name, :cost, :style, :material, :order, presence: true
    validates :name, length: { minimum: 3, maximum:50 } 
-   validates :cost, numerality: {greater_than: 0, less_than:5000}
+   validates :cost, numericality: {greater_than: 0, less_than:5000}
 end
