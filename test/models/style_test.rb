@@ -12,7 +12,7 @@ class StyleTest < ActiveSupport::TestCase
     assert Style.create(name: "Do kostek").valid?
   end
   test "name can't longer than 50 chars" do
-    assert_not Style.create(name: "blablafwethwyjrukjtyrhgfdcscdsfvbgnmhngbfvdsahbyjnbvdfsdferghtjnbvcsxsdwreththbvcserhtbfvcserghbfvsfgrfb").valid?
+    assert_not Style.create(name: "blablafwethwyjrukjtyrhgfdcscdsfvbgnmhngbfvdsahbyjnbvdfsdferghtjnbvcsxsdwrjbvfyhtsrxcvbjvhcxreartfynknbjvhcgeththbvcserhtbfvcserghbfvsfgrfb").valid?
   end
   
   test "shoud not save style's name with int value" do
