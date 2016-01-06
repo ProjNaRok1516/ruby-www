@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.2.3
+before_install:
+  - gem update --system
+  - gem --version
+install:
+  - bundle
+provider: script
+script:
+  - bin/rake test
