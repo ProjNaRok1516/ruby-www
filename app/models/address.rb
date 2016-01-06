@@ -1,3 +1,3 @@
 class Address < ActiveRecord::Base
-  validates :street, :city, :postalcode, presence: true
+  validates :street, :building, :city, :postalcode, presence: true
 end
