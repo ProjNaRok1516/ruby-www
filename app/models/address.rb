@@ -1,5 +1,6 @@
 class Address < ActiveRecord::Base
   validates :street, :building, :city, :postalcode, presence: true
+   validates :flat, presence: false
    validates :street, :city, length: { minimum: 2 }    
    validates :street,:city, length: { maximum: 50 }
    validates :building, length: { minimum: 1 }    
