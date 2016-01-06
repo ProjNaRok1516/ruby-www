@@ -22,11 +22,11 @@ class StyleTest < ActiveSupport::TestCase
     test "shoud not save material's amout with negative value" do
     assert_not Material.create(name: -123).valid?
   end
-   test "shoud not save material's amout with an zero value" do
+   test "shoud not save material's amout with a zero value" do
     assert Material.create(name: 0).valid?
   end
   
-  test "shoud not save material's amout with nil value" do
+  test "shoud not save material's amout with a nil value" do
     assert_not Material.create(name: nil).valid?
   end
   
