@@ -6,9 +6,9 @@ class MaterialTest < ActiveSupport::TestCase
     assert material.save, "correct material not saved"
   end
   
-   test "should save correct material" do
+   test "should save correct material price with percision" do
     material = materials(:two)
-    assert material.save, "correct material not saved"
+    assert material.save, "correct material price with precision not saved"
   end
   
    test "should not save material without name" do
