@@ -1,13 +1,68 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  firstname: MyString
-  lastname: MyString
-  phone: MyString
-  address_id: 
+  firstname: Katarzyna
+  lastname: Pogalska
+  phone: 123456789
 
-two:
-  firstname: MyString
-  lastname: MyString
-  phone: MyString
-  address_id: 
+client_without_fistname:
+  lastname: Pogalska
+  phone: 123456789
+
+client_without_lastname:
+  firstname: Katarzyna
+  phone: 123456789
+
+client_without_phone:
+  firstname: Katarzyna
+  lastname: Pogalska
+
+client_with_empty_firstname:
+  firstname: 
+  lastname: Pogalska
+  phone: 123456789
+
+client_with_empty_lastname:
+  firstname: Katarzyna
+  lastname: 
+  phone: 123456789
+
+client_with_empty_phone:
+  firstname: Katarzyna
+  lastname: Pogalska
+  phone: 
+
+client_with_firstanme_too_short:
+  firstname: K
+  lastname: Pogalska
+  phone: 123456789
+
+client_with_lastname_too_short:
+  firstname: Katarzyna
+  lastname: P
+  phone: 123456789
+
+client_with_phone_too_short:
+  firstname: Katarzyna
+  lastname: Pogalska
+  phone: 12345678
+
+client_with_firstname_too_long:
+  firstname: Katarzynaashgfasgfgasdigasiutgasiagsuifgszfagsifgailsahfuiashgioushfasgfisugasgfisaughauighasughuidgs
+  lastname: Pogalska
+  phone: 123456789
+
+client_with_lastname_too_long:
+  firstname: Katarzyna
+  lastname: Pogalskahgsiagdhifuahshasuihgasuighauoishguidhgasoighusaidgaslighsidguabgkjhdfuiasgfsaghasoigaugbsaghasoiugasul
+  phone: 123456789
+
+client_with_phone_too_long:
+  firstname: Katarzyna
+  lastname: Pogalska
+  phone: 1234567892
+
+client_with_phone_contains_letter:
+  firstname: Katarzyna
+  lastname: Pogalska
+  phone: 123456s89
