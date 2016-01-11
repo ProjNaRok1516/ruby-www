@@ -3,85 +3,85 @@
 one:
   name: Jedwabna do kostek
   cost: 36
-  style: :one
-  material: :one
-  order: :one
+  style: one
+  material: one
+  order: one
 
 two:
   name: Jedwabna slubna
   cost: 61.5
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_without_name:
   cost: 61.5
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_without_cost:
   name: Jedwabna slubna
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_without_style:
   name: Jedwabna slubna
   cost: 61.5
-  material: :tow
-  order: :one
+  material: two
+  order: one
 
 dress_without_material:
   name: Jedwabna slubna
   cost: 61.5
-  style: :two
-  order: :one
+  style: two
+  order: one
 
 dress_without_order:
   name: Jedwabna slubna
   cost: 61.5
-  style: :two
-  material: :tow
+  style: two
+  material: two
 
 dress_with_empty_name:
   name: 
   cost: 61.5
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_with_empty_cost:
   name: Jedwabna slubna
   cost: 
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_with_name_too_short:
   name: J
   cost: 61.5
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_with_cost_too_low:
   name: Jedwabna slubna
   cost: 0
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_with_name_too_long:
   name: Jedwabna slubna kjfjs fgpij gpsdfg jfhg hsdohf ghihg[ hfsg sdihgdh pdihfg ihag ihsfgoihsdfgoh sdfoigh sdoifghdsfhi gsfio
   cost: 61.5
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
 
 dress_with_cost_too_big:
   name: Jedwabna slubna
   cost: 5000
-  style: :two
-  material: :tow
-  order: :one
+  style: two
+  material: two
+  order: one
