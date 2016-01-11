@@ -6,7 +6,7 @@ class Dress < ActiveRecord::Base
   validates_associated :material
   validates_associated :order
   
-   validates :name, :cost, :style, :material, :order, presence: true
+   validates :name, :cost, presence: true
    validates :name, length: { minimum: 3, maximum:50 } 
    validates :cost, numericality: {greater_than: 0, less_than:5000}
 end
