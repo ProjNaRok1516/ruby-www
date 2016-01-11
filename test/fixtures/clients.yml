@@ -11,7 +11,7 @@ client_without_address:
   lastname: Pogalska
   phone: 123456789
 
-client_without_fistname:
+client_without_firstname:
   lastname: Pogalska
   phone: 123456789
   address: one
