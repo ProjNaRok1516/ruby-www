@@ -1,25 +1,9 @@
 
-<div style="background-color: #99ccff;">
-<center><h1>Koci Krawiec</h1></center>
-<center><img src="koteczek.gif" alt="Koci Krawiec" width="300" height="200"/><center>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<div class="container">
+		<h1>Koci Krawiec</h1>
+		<p><img src="koteczek.gif" alt="Koci Krawiec" width="300" height="200"/><p>
+		<p><a class="btn btn-primary btn-lg" href="/zamow" role="button">Rozpocznij zakupy »</a></p>
+	</div>
 </div>
-<%= form_tag("/zamow" ,method:"get") do %>
-<h2>Style sukienek do wyboru:</h2>
-
-<%= radio_button_tag(:styl, "styl1") %>
-<%= label_tag(:styl, "styl1") %>
-<br>
-<br>
-<%= radio_button_tag(:styl, "styl 1") %>
-<%= label_tag(:styl, "styl 2") %>
-
-<h2>Materiały do wyboru:</h2>
-<%= radio_button_tag(:material, "material 1") %>
-<%= label_tag(:material, "material 1") %>
-<br>
-<br>
-<%= radio_button_tag(:material, "material 2") %>
-<%= label_tag(:material, "material 2") %>
-<br><br>
-<%= submit_tag("Zamów") %>
-<% end %>
