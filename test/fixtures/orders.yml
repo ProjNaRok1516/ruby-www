@@ -43,3 +43,33 @@ order_with_empty_status:
   total_cost: 20
   status: 
   client: :one
+
+order_with_empty_total_cost_too_low:
+  data: 2016-01-05 14:06:24
+  total_cost: 0
+  status: 1
+  client: :one
+
+order_with_empty_total_cost_too_big:
+  data: 2016-01-05 14:06:24
+  total_cost: 500000
+  status: 1
+  client: :one
+
+order_with_empty_status_too_low:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  status: -1
+  client: :one
+
+order_with_empty_status_too_big:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  status: 2
+  client: :one
+
+order_with_empty_status_with_precision:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  status: 1.5
+  client: :one
