@@ -1,17 +1,87 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  cost: 
-  cost: 
-  style_id: 
-  material_id: 
-  order_id: 
+  name: Jedwabna do kostek
+  cost: 36
+  style: :one
+  material: :one
+  order: :one
 
 two:
-  name: MyString
+  name: Jedwabna slubna
+  cost: 61.5
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_without_name:
+  cost: 61.5
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_without_cost:
+  name: Jedwabna slubna
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_without_style:
+  name: Jedwabna slubna
+  cost: 61.5
+  material: :tow
+  order: :one
+
+dresses_without_material:
+  name: Jedwabna slubna
+  cost: 61.5
+  style: :two
+  order: :one
+
+dresses_without_order:
+  name: Jedwabna slubna
+  cost: 61.5
+  style: :two
+  material: :tow
+
+dresses_with_empty_name:
+  name: 
+  cost: 61.5
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_with_empty_cost:
+  name: Jedwabna slubna
   cost: 
-  cost: 
-  style_id: 
-  material_id: 
-  order_id: 
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_with_name_too_short:
+  name: J
+  cost: 61.5
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_with_cost_too_low:
+  name: Jedwabna slubna
+  cost: 0
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_with_name_too_long:
+  name: Jedwabna slubna kjfjs fgpij gpsdfg jfhg hsdohf ghihg[ hfsg sdihgdh pdihfg ihag ihsfgoihsdfgoh sdfoigh sdoifghdsfhi gsfio
+  cost: 61.5
+  style: :two
+  material: :tow
+  order: :one
+
+dresses_with_cost_too_big:
+  name: Jedwabna slubna
+  cost: 5000
+  style: :two
+  material: :tow
+  order: :one
