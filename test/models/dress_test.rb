@@ -47,22 +47,22 @@ class DressTest < ActiveSupport::TestCase
   end
 
   test "should not save dress with name too short" do
-    dress = dresses(:dresses_with_name_too_short)
+    dress = dresses(:dress_with_name_too_short)
     assert_not dress.save, "dress with name too short saved"
   end
 
   test "should not save dress with cost too low" do
-    dress = dresses(:dresses_with_cost_too_low)
+    dress = dresses(:dress_with_cost_too_low)
     assert_not dress.save, "dress with cost too low saved"
   end
 
   test "should not save dress with name too long" do
-    dress = dresses(:dresses_with_name_too_long)
+    dress = dresses(:dress_with_name_too_long)
     assert_not dress.save, "dress with name too long saved"
   end
 
   test "should not save dress with cost too big" do
-    dress = dresses(:dresses_with_cost_too_big)
+    dress = dresses(:dress_with_cost_too_big)
     assert_not dress.save, "dress with cost too big saved"
   end
 end
