@@ -2,14 +2,44 @@
 
 one:
   data: 2016-01-05 14:06:24
-  total_cost: 
-  total_cost: 
+  total_cost: 20
   status: 1
-  client_id: 
+  client: :one
 
-two:
+order_without_data:
+  total_cost: 20
+  status: 1
+  client: :one
+
+order_without_total_cost:
+  data: 2016-01-05 14:06:24
+  status: 1
+  client: :one
+
+order_without_status:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  client: :one
+
+order_without_client:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  status: 1
+
+order_with_empty_data:
+  data: 
+  total_cost: 20
+  status: 1
+  client: :one
+
+order_with_empty_total_cost:
   data: 2016-01-05 14:06:24
   total_cost: 
-  total_cost: 
   status: 1
-  client_id: 
+  client: :one
+
+order_with_empty_status:
+  data: 2016-01-05 14:06:24
+  total_cost: 20
+  status: 
+  client: :one
