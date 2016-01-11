@@ -1,2 +1,23 @@
-<h1>Podsumowanie zamówienia</h1>
-<h2>Dane kontaktowe</h2>
+
+<div>
+<%= form_tag("/zamow" ,method:"get") do %>
+<h2>Style sukienek do wyboru:</h2>
+
+<%= radio_button_tag(:styl, "styl1") %>
+<%= label_tag(:styl, "styl1") %>
+<br>
+<br>
+<%= radio_button_tag(:styl, "styl 1") %>
+<%= label_tag(:styl, "styl 2") %>
+
+<h2>Materiały do wyboru:</h2>
+<%= radio_button_tag(:material, "material 1") %>
+<%= label_tag(:material, "material 1") %>
+<br>
+<br>
+<%= radio_button_tag(:material, "material 2") %>
+<%= label_tag(:material, "material 2") %>
+<br><br>
+<%= submit_tag("Zamów") %>
+<% end %>
+</div>
