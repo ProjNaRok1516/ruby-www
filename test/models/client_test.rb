@@ -11,9 +11,9 @@ class ClientTest < ActiveSupport::TestCase
     assert_not client.save, "client without address saved"
   end
 
-  test "should not save client without fistname" do
-    client = clients(:client_without_fistname)
-    assert_not client.save, "client without fistname saved"
+  test "should not save client without firstname" do
+    client = clients(:client_without_firstname)
+    assert_not client.save, "client without firstname saved"
   end
 
   test "should not save client without lastname" do
