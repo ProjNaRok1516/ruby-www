@@ -26,9 +26,9 @@ class ClientTest < ActiveSupport::TestCase
     assert_not client.save, "client without phone saved"
   end
 
-  test "should not save client with empty fistname" do
-    client = clients(:client_with_empty_fistname)
-    assert_not client.save, "client with empty fistname saved"
+  test "should not save client with empty firstname" do
+    client = clients(:client_with_empty_firstname)
+    assert_not client.save, "client with empty firstname saved"
   end
 
   test "should not save client with empty lastname" do
@@ -41,9 +41,9 @@ class ClientTest < ActiveSupport::TestCase
     assert_not client.save, "client with empty phone saved"
   end
 
-  test "should not save client with firstanme too short" do
-    client = clients(:client_with_firstanme_too_short)
-    assert_not client.save, "client with firstanme too short saved"
+  test "should not save client with firstname too short" do
+    client = clients(:client_with_firstname_too_short)
+    assert_not client.save, "client with firstname too short saved"
   end
 
   test "should not save client with lastname too short" do
