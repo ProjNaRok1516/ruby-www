@@ -46,9 +46,9 @@ class ClientTest < ActiveSupport::TestCase
     assert_not client.save, "client with firstanme too short saved"
   end
 
-  test "should not save client with phone too lastname" do
+  test "should not save client with lastname too short" do
     client = clients(:client_with_lastname_too_short)
-    assert_not client.save, "client with phone too lastname saved"
+    assert_not client.save, "client with lastname too short saved"
   end
 
   test "should not save client with phone too short" do
