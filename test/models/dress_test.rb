@@ -6,6 +6,11 @@ class DressTest < ActiveSupport::TestCase
     assert dress.save, "proper dress not saved"
   end
 
+   test "should save correct dress price with percision" do
+    dress = dresses(:two)
+    assert dress.save, "correct dress price with precision not saved"
+  end
+
   test "should not save dress without name" do
     dress = dresses(:dress_without_name)
     assert_not dress.save, "dress without name saved"
