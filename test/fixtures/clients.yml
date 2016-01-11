@@ -44,7 +44,7 @@ client_with_empty_phone:
   phone: 
   address: one
 
-client_with_firstanme_too_short:
+client_with_firstname_too_short:
   firstname: K
   lastname: Pogalska
   phone: 123456789
