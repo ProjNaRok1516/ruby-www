@@ -6,17 +6,17 @@ one:
 
 two:
   name: Jedwab
-  price_per_m2: 12.2
+  price_per_m2: 12.3
 
 material_without_name:
-  price_per_m2: 12.2
+  price_per_m2: 12.3
 
 material_without_price:
   name: Jedwab
 
 material_with_empty_name:
   name: 
-  price_per_m2: 12.2
+  price_per_m2: 12.3
 
 material_with_empty_price:
   name: Jedwab
@@ -24,15 +24,15 @@ material_with_empty_price:
 
 material_with_name_too_short:
   name: J
-  price_per_m2: 12.2
+  price_per_m2: 12.3
 
 material_with_name_too_long:
   name: JjwhefhsadfhsadfhasdiufhasuifhasufhasdfgdjhgfsahtgfATJHWFSDSasgsrfgsrhsrhsrhsrfgsdsdgrgsehshrdtjjddgjdrsrhshshffsdhrfaa
-  price_per_m2: 12.2
+  price_per_m2: 12.3
 
 material_with_negative_price:
   name: Jedwab
-  price_per_m2: -12.2
+  price_per_m2: -12.3
 
 material_with_no_cost:
   name: Jedwab
