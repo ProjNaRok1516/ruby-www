@@ -55,9 +55,4 @@ class OrderTest < ActiveSupport::TestCase
     order = orders(:order_with_status_too_big)
     assert_not order.save, "order with status too big saved"
   end
-
-  test "should not save order with status with precision" do
-    order = orders(:order_with_status_with_precision)
-    assert_not order.save, "order with status with precision saved"
-  end
 end
