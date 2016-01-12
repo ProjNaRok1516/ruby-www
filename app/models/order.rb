@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   belongs_to :client
+  has_many :dresses
 
   validates :data, :total_cost, :status, presence: true
   validates :total_cost, numericality: { greater_than: 0, less_than: 500000 }
