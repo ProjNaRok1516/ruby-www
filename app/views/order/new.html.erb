@@ -1,23 +1,34 @@
 
 <div>
-<%= form_tag("/zamow" ,method:"get") do %>
-<h2>Style sukienek do wyboru:</h2>
+	<h2>Katalog dostepnych fasonow i materialow</h2>
+	<%= form_for @dress, url: "/zamow", html: { method: "post"} do |f| %>
+		<h3>Dostepne fasony</h3>
 
-<%= radio_button_tag(:styl, "styl1") %>
-<%= label_tag(:styl, "styl1") %>
-<br>
-<br>
-<%= radio_button_tag(:styl, "styl 1") %>
-<%= label_tag(:styl, "styl 2") %>
+		<div class="form-group">
+			<div class="row">
+				<% @wszystkie_style.each do |jakis_styl| %>
+					<div class="col-md-3">
+						<%= f.radio_button(:style_id, jakis_styl.id) %>
+						<%= f.label("style_id_#{jakis_styl.id}", jakis_styl.name) do %>
+							<img alt="<%= jakis_styl.name %>" class="img-responsive img-thumbnail" src="/kroje/<%= jakis_styl.image %>"  />
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+		</div>
 
-<h2>Materiały do wyboru:</h2>
-<%= radio_button_tag(:material, "material 1") %>
-<%= label_tag(:material, "material 1") %>
-<br>
-<br>
-<%= radio_button_tag(:material, "material 2") %>
-<%= label_tag(:material, "material 2") %>
-<br><br>
-<%= submit_tag("Zamów") %>
-<% end %>
+		<h3>Dostepne materiały</h3>
+		<div class="form-group">
+			<div class="row">
+				<% @wszystkie_materialy.each do |jakis_material| %>
+					<div class="col-md-3">
+						<%= f.radio_button(:material_id, jakis_material.id) %>
+						<%= f.label("material_id_#{jakis_material.id}", jakis_material.name) %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
+		<%= submit_tag("Zamów", class: "btn btn-success") %>
+	<% end %>
 </div>
