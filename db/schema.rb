@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20160105130624) do
   create_table "styles", force: :cascade do |t|
     t.string   "name"
     t.string   "image"
-    t.integer  "material_amount"
+    t.decimal  "material_amount"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
