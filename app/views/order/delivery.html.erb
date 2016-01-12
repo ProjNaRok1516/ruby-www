@@ -1,2 +1,58 @@
-<h1>Order#delivery</h1>
-<p>Find me in app/views/order/delivery.html.erb</p>
+
+<div>
+
+	<% if @client.errors.any? %>
+	<div class="alert alert-danger"><%= @client.errors.full_messages %></div>
+		<% if @client.address.errors.any? %>
+		<div class="alert alert-danger"><%= @client.address.errors.full_messages %></div>
+		<% end %>
+	<% end %>
+
+	<h2>Dostawa zamowienia</h2>
+	<%= form_for @client, url: "/dostawa", html: { method: "post"} do |f| %>
+
+		<h3>Osoba zamawiajaca</h3>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-md-1"><%= f.label(:firstname) %></div>
+				<div class="col-md-3"><%= f.text_field(:firstname) %></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"><%= f.label(:lastname) %></div>
+				<div class="col-md-3"><%= f.text_field(:lastname) %></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"><%= f.label(:phone) %></div>
+				<div class="col-md-3"><%= f.text_field(:phone) %></div>
+			</div>
+		</div>
+
+		<h3>Adres</h3>
+		<%= fields_for @client.address do |nf| %>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-1"><%= nf.label(:street) %></div>
+					<div class="col-md-3"><%= nf.text_field(:street) %></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"><%= nf.label(:building) %></div>
+					<div class="col-md-3"><%= nf.text_field(:building) %></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"><%= nf.label(:flat) %></div>
+					<div class="col-md-3"><%= nf.text_field(:flat) %></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"><%= nf.label(:postalcode) %></div>
+					<div class="col-md-3"><%= nf.text_field(:postalcode) %></div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"><%= nf.label(:city) %></div>
+					<div class="col-md-3"><%= nf.text_field(:city) %></div>
+				</div>
+			</div>
+		<% end %>
+
+		<%= submit_tag("Zamow", class: "btn btn-success") %>
+	<% end %>
+</div>

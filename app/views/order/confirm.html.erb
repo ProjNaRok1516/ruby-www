@@ -1,2 +1,61 @@
-<h1>Order#confirm</h1>
-<p>Find me in app/views/order/confirm.html.erb</p>
+
+<h2>Podsumowanie zamowienia</h2>
+
+<% if @order == nil %>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<div class="container">
+		<p>Nie dokonano zamowienia</p>
+		<p><a class="btn btn-primary btn-lg" href="/zamow" role="button">Rozpocznij zakupy »</a></p>
+	</div>
+</div>
+
+<% else %>
+
+<h3>Osoba kontatkowa</h3>
+<%= @order.client %>
+
+<h3>Adres dostawy zamowienia</h3>
+<%= @order.client.address %>
+
+<h3>Zawartosc zamowienia</h3>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+<caption>Lista zamowionych sukni.</caption>
+<thead>
+<tr>
+	<th class="text-right">#</th>
+	<th class="text-center">Fason</th>
+	<th class="text-center">Material</th>
+	<th class="text-center">Cena</th>
+	</tr>
+</thead>
+<tbody>
+<% i = 1 %>
+<% total = 0 %>
+<% @order.dresses.each do |jakas_suknia| %>
+	<tr>
+	<th class="text-right" scope="row"><%= i %></th>
+	<td><%= jakas_suknia.style.name %></td>
+	<td><%= jakas_suknia.material.name %></td>
+	<td class="text-right"><%= jakas_suknia.cost %> zl</td>
+	</tr>
+	<% i = i + 1 %>
+	<% total = total + jakas_suknia.cost %>
+<% end %>
+	<tr>
+	<th scope="row">Suma</th>
+	<td></td>
+	<td></td>
+	<td class="text-right"><%= total %> zl</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<a class="btn btn-success" href="/dostawa">Dokoncz zamowienie</a>
+
+<% end %>
+
