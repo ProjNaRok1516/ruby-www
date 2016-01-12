@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'zamow' => 'order#new'
     post 'zamow' => 'order#new'
     get 'dostawa' => 'order#delivery'
+    post 'dostawa' => 'order#delivery'
     get 'potwierdzenie' => 'order#confirm'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
