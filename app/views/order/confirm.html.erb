@@ -13,11 +13,46 @@
 
 <% else %>
 
+<% if @order.errors.any? %>
+<div class="alert alert-danger"><%= @order.errors.full_messages %></div>
+	<% if @order.client.errors.any? %>
+	<div class="alert alert-danger"><%= @order.client.errors.full_messages %></div>
+		<% if @order.client.address.errors.any? %>
+		<div class="alert alert-danger"><%= @order.client.address.errors.full_messages %></div>
+		<% end %>
+	<% end %>
+<% end %>
+
+
 <h3>Osoba kontatkowa</h3>
-<%= @order.client %>
+<div class="row">
+<div class="col-md-2">Imie: </div>
+<div class="col-md-5"><%= @order.client.firstname %></div>
+</div>
+<div class="row">
+<div class="col-md-2">Nazwisko: </div>
+<div class="col-md-5"><%= @order.client.lastname %></div>
+</div>
+<div class="row">
+<div class="col-md-2">Telefon: </div>
+<div class="col-md-5"><%= @order.client.phone %></div>
+</div>
 
 <h3>Adres dostawy zamowienia</h3>
-<%= @order.client.address %>
+<div class="row">
+<div class="col-md-2">Ulica: </div>
+<div class="col-md-5">
+<%= @order.client.address.street %>
+<%= @order.client.address.building %>
+<% if @order.client.address.flat != nil %>
+/ <%= @order.client.address.flat %>
+<% end %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">Miejscowosc: </div>
+<div class="col-md-5"><%= @order.client.address.postalcode %> <%= @order.client.address.city %></div>
+</div>
 
 <h3>Zawartosc zamowienia</h3>
 
@@ -55,7 +90,7 @@
 </table>
 </div>
 
-<a class="btn btn-success" href="/dostawa">Dokoncz zamowienie</a>
+<a class="btn btn-info" href="/zamow">Nowe zamowienie</a>
 
 <% end %>
 

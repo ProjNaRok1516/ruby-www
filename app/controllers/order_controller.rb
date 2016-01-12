@@ -23,24 +23,28 @@ class OrderController < ApplicationController
   end
 
   def delivery
-	@wszystkie_style = Style.all
-	@wszystkie_materialy = Material.all
+    if cookies[:zamowienie] == nil or cookies[:zamowienie].length == 0
+      redirect_to "/"
+    else
+      @wszystkie_style = Style.all
+      @wszystkie_materialy = Material.all
 
-    @client = Client.new
-    @client.address = Address.new
+      @client = Client.new
+      @client.address = Address.new
 
-	if params[:client] != nil
-      @client = Client.new(client_params)
-      @client.address = Address.new(address_params)
-      if(@client.address.flat.length == 0)
-        @client.address.flat = nil
-      end
-      if cookies[:klient] == nil
-        @client.save
-        if @client.errors.any?
-          @errors = @client.errors.full_messages
-        else
-          cookies[:klient] = @client.id
+      if params[:client] != nil
+        @client = Client.new(client_params)
+        @client.address = Address.new(address_params)
+        if(@client.address.flat.length == 0)
+          @client.address.flat = nil
+        end
+        if cookies[:klient] == nil
+          @client.save
+          if @client.errors.any?
+            @errors = @client.errors.full_messages
+          else
+            cookies[:klient] = @client.id
+          end
         end
       end
       if cookies[:klient] != nil
@@ -53,6 +57,42 @@ class OrderController < ApplicationController
     if cookies[:klient] != nil
       @order = Order.new
       @order.client_id = cookies[:klient]
+      suknie = []
+      suma = 0
+      pozycje = cookies[:zamowienie]
+      if pozycje != nil
+        cookies.delete(:zamowienie)
+        pozycje = pozycje.split(';')
+        pozycje.each do |pozycja|
+          numery = pozycja.split(',')
+          if numery.count == 2 and numery[0].to_i > 0 and numery[1].to_i > 0
+            suknia = Dress.new()
+            suknia.style_id = numery[0].to_i
+            suknia.material_id = numery[1].to_i
+            suknia.order_id = cookies[:zamowienie_id]
+            if suknia.style != nil and suknia.material != nil
+              suknia.name = "#{suknia.style.name} - #{suknia.material.name}"
+              suknia.cost = (suknia.style.material_amount * suknia.material.price_per_m2).round(2)
+              suma = suma + suknia.cost
+              suknie << suknia
+            end
+          end
+        end
+      end
+      @order.dresses = suknie
+      @order.total_cost = suma
+      @order.status = 0
+      @order.data = DateTime.now
+      if @order.save
+        cookies[:zamowienie_id] = @order.id
+        cookies.delete(:klient)
+      end
+    else
+      if cookies[:zamowienie_id] != nil
+        @order = Order.find(cookies[:zamowienie_id])
+      else
+        redirect_to "/"
+      end
     end
   end
 
