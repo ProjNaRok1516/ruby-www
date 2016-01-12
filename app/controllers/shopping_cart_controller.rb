@@ -1,20 +1,22 @@
 class ShoppingCartController < ApplicationController
   def index
-    @koszyk = Order.last
-    jedwab = Material.new
-    jedwab.name = 'Jedwab'
-    jedwab.price_per_m2 = 10.0
-    jedwab.save
-    dokostek = Style.new
-    dokostek.name = 'Stylowa do kostek'
-    dokostek.material_amount = 2
-    dokostek.save
-    nowykoszyk = Order.new
-    nowykoszyk.save
-    supersuknia = Dress.new
-    supersuknia.material_id = jedwab.id
-    supersuknia.style_id = dokostek.id
-    supersuknia.order_id = nowykoszyk.id
-    supersuknia.save
+    @dresses = []
+    pozycje = cookies[:zamowienie]
+    if pozycje != nil
+      pozycje = pozycje.split(';')
+      pozycje.each do |pozycja|
+        numery = pozycja.split(',')
+        if numery.count == 2 and numery[0].to_i > 0 and numery[1].to_i > 0
+          suknia = Dress.new()
+          suknia.style_id = numery[0].to_i
+          suknia.material_id = numery[1].to_i
+          if suknia.style != nil and suknia.material != nil
+            suknia.name = "#{suknia.style.name} - #{suknia.material.name}"
+            suknia.cost = (suknia.style.material_amount * suknia.material.price_per_m2).round(2)
+            @dresses << suknia
+          end
+        end
+      end
+    end
   end
 end

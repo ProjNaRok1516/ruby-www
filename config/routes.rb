@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
     get 'koszyk' => 'shopping_cart#index'
     get 'zamow' => 'order#new'
+    post 'zamow' => 'order#new'
     get 'dostawa' => 'order#delivery'
     get 'potwierdzenie' => 'order#confirm'
 
