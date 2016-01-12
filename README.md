@@ -3,7 +3,7 @@ Webowa aplikacja sklepu z usługami krawieckimi. Pozwala na wybranie kroju oraz 
 
 ### Uruchamianie projektu (Linux)
 Aby uruchomić aplikację należy przejść do folderu ruby-www
-```
+```bash
 cd ruby-www
 chmod +x ./bin/rails
 ./bin/rails server
@@ -11,7 +11,7 @@ chmod +x ./bin/rails
 Aplikacja będzie dostępna w przeglądarce internetowej pod adresem: localhost:3000.
 
 Do aplikacji dołączone są podstawowe testy jednostkowe (sprawdzające validację modeli). Uruchamia się je wpisując polecenie 
-```
+```bash
 cd ruby-www
 chmod +x ./bin/rake
 rake test
